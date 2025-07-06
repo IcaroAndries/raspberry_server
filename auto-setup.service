@@ -1,0 +1,12 @@
+[Unit]
+Description=Configuração automática única
+After=network.target
+Wants=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/boot/auto_setup.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
