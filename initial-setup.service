@@ -1,5 +1,5 @@
 [Unit]
-Description=Configuração automática única
+Description=Configuração Automática Básica
 After=network.target
 Wants=network.target
 

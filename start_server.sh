@@ -24,7 +24,7 @@ if [ ! -f index.html ]; then
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Servidor Raspberry Pi</title>
+    <title>Servidor Raspberry Pi 3</title>
     <meta charset="UTF-8">
     <style>
         body {
@@ -65,7 +65,7 @@ if [ ! -f index.html ]; then
             <p><strong>Data/Hora:</strong> <span id="datetime"></span></p>
             <p><strong>Servidor:</strong> Python HTTP Server</p>
         </div>
-        <p>Seu servidor Raspberry Pi está funcionando corretamente!</p>
+        <p>Seu servidor Raspberry Pi 3 está funcionando corretamente!</p>
         <p>Para acessar arquivos, navegue para diferentes diretórios na URL.</p>
     </div>
     

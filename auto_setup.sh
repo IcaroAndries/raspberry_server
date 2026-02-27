@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script final de configuração automática
+# Script final de configuração automática - Versão Servidor Básico
 # Executa apenas uma vez para configurar tudo
 
 LOG_FILE="/home/pi/auto_setup.log"
@@ -40,9 +40,9 @@ chmod +x /home/pi/start_server.sh
 chown pi:pi /home/pi/start_server.sh
 
 # Copia e configura o serviço systemd
-cp /boot/servidor-auto.service /etc/systemd/system/
+cp /boot/http-server.service /etc/systemd/system/
 systemctl daemon-reload
-systemctl enable servidor-auto.service
+systemctl enable http-server.service
 
 # Habilita SSH
 systemctl enable ssh
@@ -54,5 +54,6 @@ timedatectl set-timezone America/Sao_Paulo
 touch "$SETUP_DONE"
 echo "$(date): Configuração concluída!" >> "$LOG_FILE"
 
-echo "$(date): Reiniciando sistema..." >> "$LOG_FILE"
+echo "$(date): Reiniciando sistema em 10 segundos..." >> "$LOG_FILE"
+sleep 10
 reboot
